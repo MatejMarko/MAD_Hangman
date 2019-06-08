@@ -27,4 +27,7 @@
     <string name="y">Y</string>
     <string name="z">Z</string>
     <string name="newGame">START NEW GAME</string>
+    <string name="play">PLAY</string>
+    <string name="addNewWord">ADD NEW WORD</string>
+    <string name="hangman">HANGMAN</string>
 </resources>

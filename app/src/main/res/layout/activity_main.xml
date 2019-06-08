@@ -1,46 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
               android:layout_height="match_parent" android:orientation="vertical" android:gravity="center|start"
-              android:weightSum="20" android:background="@color/white" style="?android:attr/borderlessButtonStyle">
+              android:background="@color/white" style="?android:attr/borderlessButtonStyle" android:weightSum="5">
 
 
-    <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="9"
-                  android:gravity="center_horizontal" android:orientation="vertical">
-        <ImageView android:layout_width="wrap_content" android:layout_height="0dp" android:layout_weight="0.5"
-                   android:id="@+id/hangmanImage" android:src="@drawable/i_1_s"/>
-        <TextView android:layout_width="wrap_content" android:layout_height="40dp" android:textSize="25sp"
-                  android:id="@+id/guessingWord"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="3"
+                  android:orientation="vertical" android:gravity="center" android:paddingTop="30dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:text="@string/hangman" android:textSize="40dp" android:paddingBottom="20dp"
+                  android:textColor="@color/green" android:textStyle="bold"/>
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                   android:id="@+id/hangmanImage" android:src="@drawable/i_7_s"/>
     </LinearLayout>
-    <GridLayout android:layout_width="wrap_content" android:layout_height="0dp" android:layout_weight="11"
-                android:columnCount="4" android:layout_gravity="center" android:id="@+id/lettersGrid">
-        <Button android:text="@string/a" android:background="@color/white" style="?android:attr/borderlessButtonStyle" android:id="@+id/buttonA" android:tag="A" android:onClick="letterPressed" android:textSize="30sp"/>
-        <Button android:text="@string/b" android:background="@color/white" style="?android:attr/borderlessButtonStyle" android:id="@+id/buttonB" android:tag="B" android:onClick="letterPressed" android:textSize="30sp"/>
-        <Button android:text="@string/c" android:background="@color/white" style="?android:attr/borderlessButtonStyle" android:id="@+id/buttonC" android:tag="C" android:onClick="letterPressed" android:textSize="30sp"/>
-        <Button android:text="@string/d" android:background="@color/white" style="?android:attr/borderlessButtonStyle" android:id="@+id/buttonD" android:tag="D" android:onClick="letterPressed" android:textSize="30sp"/>
-        <Button android:text="@string/e" android:background="@color/white" style="?android:attr/borderlessButtonStyle" android:id="@+id/buttonE" android:tag="E" android:onClick="letterPressed" android:textSize="30sp"/>
-        <Button android:text="@string/f" android:background="@color/white" style="?android:attr/borderlessButtonStyle" android:id="@+id/buttonF" android:tag="F" android:onClick="letterPressed" android:textSize="30sp"/>
-        <Button android:text="@string/g" android:background="@color/white" style="?android:attr/borderlessButtonStyle" android:id="@+id/buttonG" android:tag="G" android:onClick="letterPressed" android:textSize="30sp"/>
-        <Button android:text="@string/h" android:background="@color/white" style="?android:attr/borderlessButtonStyle" android:id="@+id/buttonH" android:tag="H" android:onClick="letterPressed" android:textSize="30sp"/>
-        <Button android:text="@string/i" android:background="@color/white" style="?android:attr/borderlessButtonStyle" android:id="@+id/buttonI" android:tag="I" android:onClick="letterPressed" android:textSize="30sp"/>
-        <Button android:text="@string/j" android:background="@color/white" style="?android:attr/borderlessButtonStyle" android:id="@+id/buttonJ" android:tag="J" android:onClick="letterPressed" android:textSize="30sp"/>
-        <Button android:text="@string/k" android:background="@color/white" style="?android:attr/borderlessButtonStyle" android:id="@+id/buttonK" android:tag="K" android:onClick="letterPressed" android:textSize="30sp"/>
-        <Button android:text="@string/l" android:background="@color/white" style="?android:attr/borderlessButtonStyle" android:id="@+id/buttonL" android:tag="L" android:onClick="letterPressed" android:textSize="30sp"/>
-        <Button android:text="@string/m" android:background="@color/white" style="?android:attr/borderlessButtonStyle" android:id="@+id/buttonM" android:tag="M" android:onClick="letterPressed" android:textSize="30sp"/>
-        <Button android:text="@string/n" android:background="@color/white" style="?android:attr/borderlessButtonStyle" android:id="@+id/buttonN" android:tag="N" android:onClick="letterPressed" android:textSize="30sp"/>
-        <Button android:text="@string/o" android:background="@color/white" style="?android:attr/borderlessButtonStyle" android:id="@+id/buttonO" android:tag="O" android:onClick="letterPressed" android:textSize="30sp"/>
-        <Button android:text="@string/p" android:background="@color/white" style="?android:attr/borderlessButtonStyle" android:id="@+id/buttonP" android:tag="P" android:onClick="letterPressed" android:textSize="30sp"/>
-        <Button android:text="@string/q" android:background="@color/white" style="?android:attr/borderlessButtonStyle" android:id="@+id/buttonQ" android:tag="Q" android:onClick="letterPressed" android:textSize="30sp"/>
-        <Button android:text="@string/r" android:background="@color/white" style="?android:attr/borderlessButtonStyle" android:id="@+id/buttonR" android:tag="R" android:onClick="letterPressed" android:textSize="30sp"/>
-        <Button android:text="@string/s" android:background="@color/white" style="?android:attr/borderlessButtonStyle" android:id="@+id/buttonS" android:tag="S" android:onClick="letterPressed" android:textSize="30sp"/>
-        <Button android:text="@string/t" android:background="@color/white" style="?android:attr/borderlessButtonStyle" android:id="@+id/buttonT" android:tag="T" android:onClick="letterPressed" android:textSize="30sp"/>
-        <Button android:text="@string/u" android:background="@color/white" style="?android:attr/borderlessButtonStyle" android:id="@+id/buttonU" android:tag="U" android:onClick="letterPressed" android:textSize="30sp"/>
-        <Button android:text="@string/v" android:background="@color/white" style="?android:attr/borderlessButtonStyle" android:id="@+id/buttonV" android:tag="V" android:onClick="letterPressed" android:textSize="30sp"/>
-        <Button android:text="@string/w" android:background="@color/white" style="?android:attr/borderlessButtonStyle" android:id="@+id/buttonW" android:tag="W" android:onClick="letterPressed" android:textSize="30sp"/>
-        <Button android:text="@string/x" android:background="@color/white" style="?android:attr/borderlessButtonStyle" android:id="@+id/buttonX" android:tag="X" android:onClick="letterPressed" android:textSize="30sp"/>
-        <Button android:text="@string/y" android:background="@color/white" style="?android:attr/borderlessButtonStyle" android:id="@+id/buttonY" android:tag="Y" android:onClick="letterPressed" android:textSize="30sp"/>
-        <Button android:text="@string/z" android:background="@color/white" style="?android:attr/borderlessButtonStyle" android:id="@+id/buttonZ" android:tag="Z" android:onClick="letterPressed" android:textSize="30sp"/>
-        <Button android:text="@string/newGame" android:layout_gravity="fill_horizontal" android:layout_columnSpan="2" android:textColor="@color/white" android:background="@color/green" android:id="@+id/newGame" android:onClick="newGame"/>
-    </GridLayout>
-
-
+    <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="2"
+                  android:orientation="vertical" android:gravity="center">
+        <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/play"
+                android:onClick="play" android:background="@color/green" android:textColor="@color/white"
+                android:layout_marginBottom="20dp"/>
+        <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:onClick="addNewWord"
+                android:background="@color/brown" android:textColor="@color/white" android:paddingLeft="20dp" android:paddingRight="20dp"
+                android:text="@string/addNewWord"/>
+    </LinearLayout>
 </LinearLayout>
