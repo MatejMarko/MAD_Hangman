@@ -12,7 +12,7 @@
                   android:id="@+id/guessingWord"/>
     </LinearLayout>
     <GridLayout android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1"
-                android:columnCount="4" android:layout_gravity="center">
+                android:columnCount="4" android:layout_gravity="center" android:id="@+id/lettersGrid">
         <Button android:text="@string/a" android:background="@color/white" style="?android:attr/borderlessButtonStyle" android:id="@+id/buttonA" android:tag="A" android:onClick="letterPressed"/>
         <Button android:text="@string/b" android:background="@color/white" style="?android:attr/borderlessButtonStyle" android:id="@+id/buttonB" android:tag="B" android:onClick="letterPressed"/>
         <Button android:text="@string/c" android:background="@color/white" style="?android:attr/borderlessButtonStyle" android:id="@+id/buttonC" android:tag="C" android:onClick="letterPressed"/>
@@ -31,7 +31,7 @@
         <Button android:text="@string/p" android:background="@color/white" style="?android:attr/borderlessButtonStyle" android:id="@+id/buttonP" android:tag="P" android:onClick="letterPressed" />
         <Button android:text="@string/q" android:background="@color/white" style="?android:attr/borderlessButtonStyle" android:id="@+id/buttonQ" android:tag="Q" android:onClick="letterPressed" />
         <Button android:text="@string/r" android:background="@color/white" style="?android:attr/borderlessButtonStyle" android:id="@+id/buttonR" android:tag="R" android:onClick="letterPressed" />
-        <Button android:text="@string/s" android:background="@color/white" style="?android:attr/borderlessButtonStyle" android:id="@+id/buttonS" android:tag="D" android:onClick="letterPressed" />
+        <Button android:text="@string/s" android:background="@color/white" style="?android:attr/borderlessButtonStyle" android:id="@+id/buttonS" android:tag="S" android:onClick="letterPressed" />
         <Button android:text="@string/t" android:background="@color/white" style="?android:attr/borderlessButtonStyle" android:id="@+id/buttonT" android:tag="T" android:onClick="letterPressed" />
         <Button android:text="@string/u" android:background="@color/white" style="?android:attr/borderlessButtonStyle" android:id="@+id/buttonU" android:tag="U" android:onClick="letterPressed" />
         <Button android:text="@string/v" android:background="@color/white" style="?android:attr/borderlessButtonStyle" android:id="@+id/buttonV" android:tag="V" android:onClick="letterPressed" />
