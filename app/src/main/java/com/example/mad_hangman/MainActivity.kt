@@ -4,10 +4,7 @@ import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
-import android.widget.GridLayout
-import android.widget.ImageView
-import android.widget.TextView
+import android.widget.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -54,6 +51,10 @@ class MainActivity : AppCompatActivity() {
         wordToDisplay = newWord
         displayGuessingWord()
         handlePressedLetter(v.id, wrongLetter)
+        if (wordToDisplay == wordToGuess) {
+            guessingWordTextView?.setTextColor(Color.GREEN)
+            setLettersEnabled(false)
+        }
     }
 
     private fun displayGuessingWord() {
@@ -87,10 +88,29 @@ class MainActivity : AppCompatActivity() {
         if (strikes == maxStrikes) {
             var displayedWord: TextView = findViewById(R.id.guessingWord)
             displayedWord.setTextColor(Color.RED)
-            var letterLayout: GridLayout = findViewById(R.id.lettersGrid)
-            for (x in 0 until letterLayout.childCount) {
-                var child: Button = letterLayout.getChildAt(x) as Button
-                child.isEnabled = false
+            setLettersEnabled(false)
+        }
+    }
+
+    fun newGame(v: View) {
+        strikes = 0
+        image?.setImageResource(R.drawable.i_1_s)
+        wordToGuess = "IZPIT"
+        wordToDisplay = "_____"
+        displayGuessingWord()
+        setLettersEnabled(true)
+    }
+
+    private fun setLettersEnabled(enable: Boolean) {
+        var letterLayout: GridLayout = findViewById(R.id.lettersGrid)
+        for (x in 0 until letterLayout.childCount - 1) {
+            var child: Button = letterLayout.getChildAt(x) as Button
+            child.isEnabled = enable
+            if (child.currentTextColor != Color.RED && child.currentTextColor != Color.GREEN)
+                child.setTextColor(Color.LTGRAY)
+            if (enable) {
+                child.setTextColor(Color.BLACK)
+                guessingWordTextView?.setTextColor(Color.BLACK)
             }
         }
     }
