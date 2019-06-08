@@ -4,14 +4,16 @@ import android.content.Intent
 import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.*
+import kotlin.random.Random
 
 class Game : AppCompatActivity() {
 
     //TODO select random word, also when new game buton pressed
-    private var wordToGuess: String = "ZEMLJEVID"
-    private var wordToDisplay: String = "_________"
+    private var wordToGuess: String = ""
+    private var wordToDisplay: String = ""
     private var guessingWordTextView: TextView? = null
     private var image: ImageView? = null
     private var strikes = 0
@@ -21,6 +23,8 @@ class Game : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game)
         this.supportActionBar!!.hide()
+
+        setWords()
 
         image = findViewById(R.id.hangmanImage)
         image?.setImageResource(R.drawable.i_1_s)
@@ -97,8 +101,7 @@ class Game : AppCompatActivity() {
     fun newGame(v: View) {
         strikes = 0
         image?.setImageResource(R.drawable.i_1_s)
-        wordToGuess = "IZPIT"
-        wordToDisplay = "_____"
+        setWords()
         displayGuessingWord()
         setLettersEnabled(true)
     }
@@ -115,5 +118,16 @@ class Game : AppCompatActivity() {
                 guessingWordTextView?.setTextColor(Color.BLACK)
             }
         }
+    }
+
+    private fun setWords() {
+        val list: List<String>? = Preferences(this).getWords()
+        val size:Int = list?.size!!
+        val r = Random.nextInt(0, size-1)
+        wordToGuess = list[r]
+        wordToDisplay = ""
+        for (letter in wordToGuess)
+            wordToDisplay += "_"
+
     }
 }

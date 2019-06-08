@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    fun addNewWord(v: View) {
+    fun addNewWordScreen(v: View) {
         val intent = Intent(this, AddNewWord::class.java)
         startActivity(intent)
     }

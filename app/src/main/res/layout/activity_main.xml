@@ -7,7 +7,7 @@
     <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="3"
                   android:orientation="vertical" android:gravity="center" android:paddingTop="30dp">
         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                  android:text="@string/hangman" android:textSize="40dp" android:paddingBottom="20dp"
+                  android:text="@string/hangman" android:textSize="40sp" android:paddingBottom="20dp"
                   android:textColor="@color/green" android:textStyle="bold"/>
         <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
                    android:id="@+id/hangmanImage" android:src="@drawable/i_7_s"/>
@@ -17,7 +17,7 @@
         <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/play"
                 android:onClick="play" android:background="@color/green" android:textColor="@color/white"
                 android:layout_marginBottom="20dp"/>
-        <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:onClick="addNewWord"
+        <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:onClick="addNewWordScreen"
                 android:background="@color/brown" android:textColor="@color/white" android:paddingLeft="20dp" android:paddingRight="20dp"
                 android:text="@string/addNewWord"/>
     </LinearLayout>
