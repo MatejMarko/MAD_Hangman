@@ -3,7 +3,6 @@ package com.example.mad_hangman
 import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.GridLayout
@@ -14,7 +13,7 @@ class MainActivity : AppCompatActivity() {
 
     private var wordToGuess: String = "ZEMLJEVID"
     private var wordToDisplay: String = "_________"
-    private var guessingWordTextView: TextView? = null //TODO can it be private
+    private var guessingWordTextView: TextView? = null
     private var image: ImageView? = null
     private var strikes = 0
     private var maxStrikes = 6
@@ -32,7 +31,6 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    //TODO to dobro razmisli
     fun letterPressed(v: View) {
         var pressedLetter: Char = v.tag.toString()[0]
         var newWord = ""
