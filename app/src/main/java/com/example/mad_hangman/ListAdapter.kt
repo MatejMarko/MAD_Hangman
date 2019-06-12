@@ -8,7 +8,7 @@ import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.TextView
 
-class ListAdapter(context: Context, var resource: Int, var items: List<String>?) :
+class ListAdapter(context: Context, var resource: Int, var items: ArrayList<String>?) :
     ArrayAdapter<String>(context, resource, items) {
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
